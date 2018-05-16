@@ -1,5 +1,20 @@
 extends layout
 
+block errors
+	p(class="error")= error
+
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	p Because there aren't already enough Rube Goldberg machines on the internet, welcome to Gkleinereva's #{title}.  It's pretty simple to use (see examples below).
+
+	h2 First go to a URL of this form:
+	a(href = example.url) #{example.url}
+
+	h2 You will receive JSON output that looks like this:
+	p #{example.output}
+
+	h2 If you visit the 'short_url':
+	p #{example.usage}
+
+	h2 You'll be redirected to your 'original_url'!
+	p #{example.redirect}
