@@ -6,7 +6,7 @@ var logger = require('morgan');
 var helmet = require("helmet");
 
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://Admin:Admin@ds123770.mlab.com:23770/gkleinerevaurlshortener';
+var mongoDB = process.env.MONGODB_URI || 'mongodb://Admin:Admin@ds123770.mlab.com:23770/gkleinerevaurlshortener';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
