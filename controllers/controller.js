@@ -1,4 +1,4 @@
-var URLMap = require('../models/URLMap');
+var URLMap = require('../models/urlmap');
 
 exports.GoHome = function(req, res, next) {
 	var example = {};
